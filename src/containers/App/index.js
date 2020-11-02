@@ -1,8 +1,14 @@
+import React from "react";
 import { useEffect, useState } from 'react'
 import { withFirestore } from '../../components/Firebase';
 import TournamentList from '../../components/TournamentList';
 import TournamentMatches from '../../components/TournamentMatches';
 import './App.css';
+import { Card, CardBody, CardTitle, Button } from "shards-react";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "shards-ui/dist/css/shards.min.css"
+
 
 function App({firestore}) {
   const [matches, setMatches] = useState({});
@@ -66,10 +72,23 @@ function App({firestore}) {
 
   useEffect(() => {
     getTournamentList()
-  }, [])
+  })
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     <div className="App">
+        <Card>
+          <CardBody>
+            <CardTitle>
+              <Button size='lg' theme='light' onClick={refreshPage}>
+                Nomad Stadium
+              </Button>
+            </CardTitle>
+          </CardBody>
+        </Card>
         {determineDisplay()}
     </div>
   );
