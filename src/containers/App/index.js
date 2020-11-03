@@ -55,7 +55,7 @@ function App({firestore}) {
         )
       }
 
-      return tournamentMatches;
+      return tournamentMatches.reverse();
     }
 
     return (
