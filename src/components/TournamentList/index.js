@@ -7,20 +7,20 @@ import "shards-ui/dist/css/shards.min.css"
 
 export default function TournamentList({tournaments, onClick}) {
     return (
-        <Card>
+        <div className="body">
             <CardBody>
-                <ListGroup small='yes'>
+                <ListGroup>
                     {
                         tournaments ? tournaments.map((name, index) => {
                             return (
                                 <ListGroupItem key={index} onClick={() => onClick(name)}>
-                                    {name}
+                                    <h4 style={{margin: 'auto'}}>{name}</h4>
                                 </ListGroupItem>
                             )
                         }) : null
                     }
                 </ListGroup>
             </CardBody>
-        </Card>
+        </div>
     )
 }

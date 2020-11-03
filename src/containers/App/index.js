@@ -4,7 +4,7 @@ import { withFirestore } from '../../components/Firebase';
 import TournamentList from '../../components/TournamentList';
 import TournamentMatches from '../../components/TournamentMatches';
 import './App.css';
-import { Card, CardBody, CardTitle, Button } from "shards-react";
+import { Card, CardBody, CardTitle, Button, CardSubtitle } from "shards-react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
@@ -80,16 +80,23 @@ function App({firestore}) {
 
   return (
     <div className="App">
-        <Card>
+        <Card className="superHeader">
+          <CardBody>
+          <Card className="Header">
           <CardBody>
             <CardTitle>
               <Button size='lg' theme='light' onClick={refreshPage}>
-                Nomad Stadium
+                <h2 style={{margin: 'auto'}}>Nomad Stadium</h2>
               </Button>
             </CardTitle>
+            <CardSubtitle className="superHeaderSubtitle">
+            Live MTG Tournament Updates
+            </CardSubtitle>
+            </CardBody>
+        </Card>
           </CardBody>
         </Card>
-        {determineDisplay()}
+            {determineDisplay()}
     </div>
   );
 }

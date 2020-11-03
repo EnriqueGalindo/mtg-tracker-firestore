@@ -20,3 +20,22 @@ li {
 .App-link {
   color: #61dafb;
 }
+
+.superHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.superHeaderSubtitle {
+  margin: auto;
+  margin-bottom: 15px;
+}

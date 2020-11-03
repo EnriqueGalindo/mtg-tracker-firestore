@@ -8,7 +8,7 @@ import "shards-ui/dist/css/shards.min.css"
 export default function TournamentMatches({title, matches}) {
     return (
         <>
-            <Card>
+            <div className="body">
                 <CardBody>
                     <CardTitle>
                         {title}
@@ -29,7 +29,7 @@ export default function TournamentMatches({title, matches}) {
                                                 score: {match['score']}
                                             </ListGroupItem>
                                             <ListGroupItem>
-                                                victor: {match['victor']}
+                                                <strong>Victor:</strong> {match['victor']}
                                             </ListGroupItem>
                                         </ListGroup>
                                     </div>
@@ -38,7 +38,7 @@ export default function TournamentMatches({title, matches}) {
                         }
                     </ListGroup>
                 </CardBody>
-            </Card>
+            </div>
 
             
             
