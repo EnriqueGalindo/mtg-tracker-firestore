@@ -20,9 +20,6 @@ export default function TournamentMatches({title, matches}) {
                                     <div style={{border: '1px solid black'}}>
                                         <ListGroup small='yes'>
                                             <ListGroupItem>
-                                                Date: {match.date}
-                                            </ListGroupItem>
-                                            <ListGroupItem>
                                                 Player 1: {match['player 1']}
                                             </ListGroupItem>
                                             <ListGroupItem>
