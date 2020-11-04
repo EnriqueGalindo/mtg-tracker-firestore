@@ -17,13 +17,13 @@ export default function TournamentMatches({title, matches}) {
                         {
                             matches ? matches.map(match => {
                                 return (
-                                    <div style={{border: '1px solid black'}}>
+                                    <div style={{border: '.5px solid black'}}>
                                         <ListGroup small='yes'>
                                             <ListGroupItem>
-                                                Player 1: {match['player 1']}
+                                                Player 1: {match['player 1']} {match['p1']}
                                             </ListGroupItem>
                                             <ListGroupItem>
-                                                Player 2: {match['player 2']}
+                                                Player 2: {match['player 2']} {match['p2']}
                                             </ListGroupItem>
                                             <ListGroupItem>
                                                 score: {match['score']}
